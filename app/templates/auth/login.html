@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ super() }}
+Login
+{% endblock%}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-5">
+            <h2 class="well text-center">Login</h2>
+            <form action="/loginin" method="post" contextmenu="">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" class="form-control" id="txtUsername" name="txtUsername" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="txtPassword" name="txtPassword" placeholder="Password">
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div class="pull-right">
+                <span><a href="auth">Registrar...</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
